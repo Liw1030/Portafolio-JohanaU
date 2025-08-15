@@ -1,0 +1,54 @@
+:root{
+    --wisteria: #c8b1e4ff;
+    --tekhelet: #532b88ff;
+    --russian-violet: #2f184bff;
+    --magnolia: #f4effaff;
+    --amethyst: #9b72cfff;
+    --size-tittle: 32px;
+    --size-subtittle: 24px;
+    --size-text: 16px;
+    --font: 'Montserrat', san-serif; 
+}
+
+*{
+    margin: 0;
+    font-family: var(--font);
+}
+
+.navbar{
+    background-color: var(--tekhelet);
+    color: var(--wisteria);
+    height: 80px;
+}
+
+.navbar-brand span{
+    color: var(--magnolia);
+    font-weight: bold;
+    font-size: var(--size-subtittle);
+}
+
+a.navbar-brand{
+    color: var(--wisteria);
+    font-weight: bold;
+    font-size: var(--size-subtittle);
+    margin-left: 10px;
+}
+
+a.navbar-brand:hover{
+    color: var(--wisteria);
+    font-weight: bold;
+}
+
+.navbar-nav a{
+    color: var(--wisteria);
+    font-weight: bold;
+    transition: 0.6s;
+    margin: 0px 5px;
+    font-size: 18px;
+} 
+
+.navbar-nav a:hover{
+    color: var(--tekhelet);
+    background-color: var(--wisteria);
+    border-radius: 8px;
+} 

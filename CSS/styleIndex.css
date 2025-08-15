@@ -1,0 +1,19 @@
+:root {
+    --wisteria: #c8b1e4ff;
+    --tekhelet: #532b88ff;
+    --russian-violet: #2f184bff;
+    --magnolia: #f4effaff;
+    --amethyst: #9b72cfff;
+    --size-tittle: 32px;
+    --size-subtittle: 24px;
+    --size-text: 16px;
+    --font: 'Montserrat', san-serif;
+}
+
+
+.linea {
+    height: 2px;
+    background-color: var(--russian-violet);
+    width: 90%;
+    margin: 20px auto;
+}

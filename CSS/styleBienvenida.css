@@ -1,0 +1,87 @@
+:root {
+    --wisteria: #c8b1e4ff;
+    --tekhelet: #532b88ff;
+    --russian-violet: #2f184bff;
+    --magnolia: #f4effaff;
+    --amethyst: #9b72cfff;
+    --size-tittle: 32px;
+    --size-subtittle: 24px;
+    --size-text: 16px;
+    --font: 'Montserrat', san-serif;
+}
+
+div.container {
+    animation-delay: 2s;
+    animation-direction: normal;
+}
+
+
+h2 {
+    background: linear-gradient(135deg, rgb(0, 0, 0), #2f184b, #532b88, #c8b1e4, rgb(242, 233, 253));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 5em;
+}
+
+.iconsBienvenida{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#iconGitHub {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url(/Public/images/github-logo.png);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--russian-violet);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#iconGitHub:hover {
+    transform: scale(1.2);
+}
+
+
+#iconLinkedin {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url(/Public/images/linkedin-logo.png);
+    background-size: contain;
+    background-position: center;
+    background-color: var(--russian-violet);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#iconLinkedin:hover {
+    transform: scale(1.2);
+}
+
+#iconCV {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: var(--wisteria);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 28px;
+    background-color: var(--russian-violet);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#iconCV:hover {
+    transform: scale(1.2);
+}
