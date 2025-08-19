@@ -1,0 +1,36 @@
+:root {
+    --wisteria: #c8b1e4ff;
+    --tekhelet: #532b88ff;
+    --russian-violet: #2f184bff;
+    --magnolia: #f4effaff;
+    --amethyst: #9b72cfff;
+    --size-tittle: 32px;
+    --size-subtittle: 24px;
+    --size-text: 16px;
+    --font: 'Montserrat', san-serif;
+}
+
+input.form-control,
+textarea.form-control {
+    border: 1px solid var(--tekhelet);
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+    border-color: #9b72cf;
+    box-shadow: 0 0 12px 2px var(--amethyst);
+}
+
+.contenedorContacto {
+    width: 100%;
+    gap: 50px;
+}
+
+.formularioContacto {
+    width: 50%;
+    margin-left: 50px;
+}
+
+img {
+    margin-right: 30px;
+}

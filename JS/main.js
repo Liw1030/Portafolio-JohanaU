@@ -1,28 +1,28 @@
-import { iniciarAnimacionBienvenida, animarIconosBienvenida} from './Bievenida.js';
+import { iniciarAnimacionBienvenida, animarIconosBienvenida } from './Bienvenida.js';
+import { iniciarSliderProyectos } from './Proyectos.js';
 
-fetch('components/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-    document.getElementById('navbar').innerHTML = data;
-});
+async function cargarComponentes() {
+    // Navbar
+    const nav = await fetch('components/navbar.html').then(r => r.text());
+    document.getElementById('navbar').innerHTML = nav;
 
-fetch('components/sectionBienvenida.html')
-    .then(response => response.text())
-    .then(data => {
-    document.getElementById('sectionBienvenida').innerHTML = data;
-    iniciarAnimacionBienvenida()
-    animarIconosBienvenida()
-});
+    // Bienvenida
+    const bienvenida = await fetch('components/sectionBienvenida.html').then(r => r.text());
+    document.getElementById('sectionBienvenida').innerHTML = bienvenida;
+    iniciarAnimacionBienvenida();
+    animarIconosBienvenida();
 
-fetch('components/sectionSobreMi.html')
-    .then(response => response.text())
-    .then(data => {
-    document.getElementById('sectionSobreMi').innerHTML = data;
-});
+    // Sobre mi
+    const sobreMi = await fetch('components/sectionSobreMi.html').then(r => r.text());
+    document.getElementById('sectionSobreMi').innerHTML = sobreMi;
 
-// fetch('components/sectionProyectos.html')
-//     .then(response => response.text())
-//     .then(data => {
-//     document.getElementById('sectionProyectos').innerHTML = data;
-// });
+    // Proyectos
+    const proyectos = await fetch('components/sectionProyectos.html').then(r => r.text());
+    document.getElementById('sectionProyectos').innerHTML = proyectos;
+    iniciarSliderProyectos();
 
+    const contacto = await fetch('components/sectionContactame.html').then(r =>r.text());
+    document.getElementById('sectionContactame').innerHTML = contacto;
+}
+
+cargarComponentes();

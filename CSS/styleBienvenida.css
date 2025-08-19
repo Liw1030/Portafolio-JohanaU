@@ -11,13 +11,13 @@
 }
 
 div.container {
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 30px;
-    box-shadow: 1px 0px 10px var(--tekhelet);
+    box-shadow: 1px 0px 10px var(--amethyst);
 }
 
 
@@ -33,7 +33,7 @@ h2 {
 
 .iconsBienvenida {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
