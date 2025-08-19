@@ -1,0 +1,23 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liw1030/Portafolio-JohanaU.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liw1030/Portafolio-JohanaU/issues"
+  },
+  "homepage": "https://github.com/Liw1030/Portafolio-JohanaU#readme",
+  "description": "",
+  "dependencies": {
+    "animejs": "^4.1.3"
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+    --wisteria: #c8b1e4ff;
+    --tekhelet: #532b88ff;
+    --russian-violet: #2f184bff;
+    --magnolia: #f4effaff;
+    --amethyst: #9b72cfff;
+    --size-tittle: 32px;
+    --size-subtittle: 24px;
+    --size-text: 16px;
+    --font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+}
+
+#cardSobreMi {
+    border-radius: 30px;
+    padding: 50px;
+    margin: 10px auto;
+    border: none;
+    width: 100%;
+    height: 380px;
+}
+
+.card-title {
+    color: var(--russian-violet);
+    font-weight: bold;
+    font-size: var(--size-tittle);
+    margin-bottom: 30px;
+} 
+
+.card-text {
+    font-size: var(--size-text);
+}
+
+img {
+    max-width: 200px;
+    max-height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}

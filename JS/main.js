@@ -1,3 +1,5 @@
+import { iniciarAnimacionBienvenida, animarIconosBienvenida} from './Bievenida.js';
+
 fetch('components/navbar.html')
     .then(response => response.text())
     .then(data => {
@@ -8,12 +10,8 @@ fetch('components/sectionBienvenida.html')
     .then(response => response.text())
     .then(data => {
     document.getElementById('sectionBienvenida').innerHTML = data;
-});
-
-fetch('components/sectionProyectos.html')
-    .then(response => response.text())
-    .then(data => {
-    document.getElementById('sectionProyectos').innerHTML = data;
+    iniciarAnimacionBienvenida()
+    animarIconosBienvenida()
 });
 
 fetch('components/sectionSobreMi.html')
@@ -22,15 +20,9 @@ fetch('components/sectionSobreMi.html')
     document.getElementById('sectionSobreMi').innerHTML = data;
 });
 
-let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
+// fetch('components/sectionProyectos.html')
+//     .then(response => response.text())
+//     .then(data => {
+//     document.getElementById('sectionProyectos').innerHTML = data;
+// });
 
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-})
-
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
-})

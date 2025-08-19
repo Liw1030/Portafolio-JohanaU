@@ -18,7 +18,7 @@
 .navbar{
     background-color: var(--tekhelet);
     color: var(--wisteria);
-    height: 80px;
+    height: 60px;
 }
 
 .navbar-brand span{
@@ -44,7 +44,7 @@ a.navbar-brand:hover{
     font-weight: bold;
     transition: 0.6s;
     margin: 0px 5px;
-    font-size: 18px;
+    font-size: var(--size-text);
 } 
 
 .navbar-nav a:hover{

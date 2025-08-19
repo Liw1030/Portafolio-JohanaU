@@ -11,13 +11,18 @@
 }
 
 div.container {
-    animation-delay: 2s;
-    animation-direction: normal;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 1px 0px 10px var(--tekhelet);
 }
 
 
 h2 {
-    background: linear-gradient(135deg, rgb(0, 0, 0), #2f184b, #532b88, #c8b1e4, rgb(242, 233, 253));
+    background: linear-gradient(135deg, rgb(0, 0, 0), #2f184b, #532b88, #caafeb, rgb(214, 189, 245));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -25,9 +30,10 @@ h2 {
     font-size: 5em;
 }
 
-.iconsBienvenida{
+
+.iconsBienvenida {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -35,35 +41,27 @@ h2 {
 
 #iconGitHub {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-image: url(/Public/images/github-logo.png);
-    background-size: cover;
+    background-size: 40px;
+    background-repeat: no-repeat;
     background-position: center;
     background-color: var(--russian-violet);
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
-
-#iconGitHub:hover {
-    transform: scale(1.2);
-}
-
 
 #iconLinkedin {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-image: url(/Public/images/linkedin-logo.png);
-    background-size: contain;
+    background-size: 40px;
+    background-repeat: no-repeat;
     background-position: center;
     background-color: var(--russian-violet);
     border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-#iconLinkedin:hover {
-    transform: scale(1.2);
 }
 
 #iconCV {
@@ -71,17 +69,12 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     color: var(--wisteria);
     text-decoration: none;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 20px;
     background-color: var(--russian-violet);
     border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-#iconCV:hover {
-    transform: scale(1.2);
 }
