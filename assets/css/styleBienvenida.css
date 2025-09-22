@@ -7,74 +7,93 @@
     --size-tittle: 32px;
     --size-subtittle: 24px;
     --size-text: 16px;
-    --font: 'Montserrat', san-serif;
+    --font: 'Montserrat', sans-serif; /* Usar 'sans-serif' es una buena práctica */
 }
 
-div.container {
-    height: 500px;
+/* Estilos globales para tu sección.
+  Usar un contenedor general para toda la sección y un contenedor para el contenido.
+*/
+#sectionBienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa al menos la altura completa de la pantalla */
+    text-align: center; /* Alinea el texto en el centro */
+}
+
+.bienvenida-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 3rem 1.5rem; /* Espaciado interno responsivo */
     border-radius: 30px;
-    box-shadow: 1px 0px 10px var(--amethyst);
+    box-shadow: 0 0 20px 0 var(--amethyst); /* Mejoramos la sombra */
+    max-width: 960px;
 }
 
-
-h2 {
-    background: linear-gradient(135deg, rgb(0, 0, 0), #2f184b, #532b88, #caafeb, rgb(214, 189, 245));
+/* Estilos para los títulos
+  Aplicamos el degradado directamente al h2 para que el JS lo herede
+*/
+.titleBienvenida h2 {
+    background: linear-gradient(135deg, rgb(0, 0, 0), var(--russian-violet), var(--tekhelet), var(--wisteria), rgb(214, 189, 245));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    font-size: 5em;
+    font-size: clamp(3rem, 10vw, 5rem); /* Título responsivo */
+    line-height: 1.2; /* Mejora la legibilidad en dos líneas */
 }
 
-
+/* Estilos para el contenedor de iconos
+  Hacemos el espacio entre iconos responsivo con 'gap'
+*/
 .iconsBienvenida {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap; /* Permite que los iconos se ajusten a una nueva línea si no hay espacio */
+    gap: 1.5rem; /* Espaciado entre los iconos */
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
-#iconGitHub {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-image: url(/assets/img/github-logo.png);
-    background-size: 40px;
-    background-repeat: no-repeat;
-    background-position: center;
+/* Estilos base para todos los iconos
+  Ajustamos los tamaños y añadimos un efecto de transición
+*/
+.iconSquare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
     background-color: var(--russian-violet);
     border-radius: 50%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iconSquare:hover {
+    transform: scale(1.15); /* Efecto de crecimiento al pasar el mouse */
+    box-shadow: 0 0 15px var(--amethyst); /* Sombra para resaltar el icono */
+}
+
+/* Estilos específicos para los iconos */
+#iconGitHub {
+    background-image: url(/assets/img/github-logo.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #iconLinkedin {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
     background-image: url(/assets/img/linkedin-logo.png);
-    background-size: 40px;
+    background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--russian-violet);
-    border-radius: 50%;
 }
 
 #iconCV {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
     color: var(--wisteria);
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
-    background-color: var(--russian-violet);
-    border-radius: 50%;
 }

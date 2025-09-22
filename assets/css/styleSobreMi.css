@@ -1,11 +1,12 @@
 :root {
+    /* Mantenemos tus variables de color */
     --wisteria: #c8b1e4ff;
     --tekhelet: #532b88ff;
     --russian-violet: #2f184bff;
     --magnolia: #f4effaff;
     --amethyst: #9b72cfff;
-    --size-tittle: 32px;
-    --size-subtittle: 24px;
+    --size-title: 32px;
+    --size-subtitle: 24px;
     --size-text: 16px;
     --font: 'Montserrat', sans-serif;
 }
@@ -14,29 +15,65 @@ body {
     font-family: var(--font);
 }
 
-#cardSobreMi {
-    border-radius: 30px;
-    padding: 50px;
-    margin: 10px auto;
-    border: none;
-    width: 100%;
-    height: 380px;
+.seccion-sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: 100vh;
 }
 
-.card-title {
+.tarjeta-sobre-mi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--magnolia);
+    box-shadow: 0px 0px 20px 0px var(--amethyst);
+    border-radius: 30px;
+    padding: 30px;
+    border: none;/* Aquí ajustamos el ancho máximo del contenedor */
+    max-width: 960px;
+}
+
+.contenido-tarjeta {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+}
+
+.titulo-tarjeta {
     color: var(--russian-violet);
     font-weight: bold;
-    font-size: var(--size-tittle);
-    margin-bottom: 30px;
+    font-size: var(--size-title);
+    margin-bottom: 20px;
+    text-align: center;
 } 
 
-.card-text {
+.parrafo-tarjeta {
     font-size: var(--size-text);
+    line-height: 1.6;
 }
 
-img {
+.imagen-perfil {
     max-width: 200px;
-    max-height: 300px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query para escritorio */
+@media (min-width: 768px) {
+    .contenido-tarjeta {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .tarjeta-sobre-mi {
+        padding: 50px;
+    }
+    .titulo-tarjeta {
+        text-align: left;
+    }
 }

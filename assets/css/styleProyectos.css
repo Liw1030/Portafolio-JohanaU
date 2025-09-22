@@ -19,7 +19,7 @@ h5.card-title.text-center {
 .slider-container {
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,6 +108,7 @@ h5.card-title.text-center {
     transform: translateY(-50%);
     color: var(--magnolia);
     display: none;
+    background-color: rgba(148, 148, 148, 0.774);
 }
 
 .slide-item.active .slide-content {

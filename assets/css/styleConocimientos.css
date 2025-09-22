@@ -1,0 +1,74 @@
+:root {
+    --wisteria: #c8b1e4ff;
+    --tekhelet: #532b88ff;
+    --russian-violet: #2f184bff;
+    --magnolia: #f4effaff;
+    --amethyst: #9b72cfff;
+    --size-title: 32px;
+    --size-subtitle: 24px;
+    --size-text: 16px;
+    --font: 'Montserrat', sans-serif;
+}
+
+.seccion-conocimientos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    background-color: var(--magnolia);
+}
+
+.contenedor-conocimientos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--magnolia);
+    box-shadow: 0px 0px 20px 0px var(--amethyst);
+    border-radius: 30px;
+    padding: 40px 30px;
+    max-width: 960px; /* Consistencia con otras secciones */
+    text-align: center;
+}
+
+.titulo-seccion {
+    color: var(--russian-violet);
+    font-weight: bold;
+    font-size: clamp(2.5rem, 6vw, var(--size-title)); /* Título responsivo */
+    margin-bottom: 30px;
+}
+
+
+
+.habilidad-card {
+    background-color: var(--russian-violet);
+    color: var(--magnolia);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.habilidad-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo-habilidad {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.nombre-habilidad {
+    font-size: var(--size-text);
+    font-weight: 600;
+    margin: 0;
+}
+
+.nivel-habilidad {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    color: var(--wisteria);
+}

@@ -1,67 +1,47 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slider Animado</title>
-    <link rel="stylesheet" href="/CSS/styleProyectos.css" />
-</head>
-
-<body>
-    <section id="sectionProyectos" class="container py-5">
-        <div class="container">
-            <div class="slider-container">
-                <h5 class="card-title text-center">Mis Proyectos</h5>
-                <div class="slide-wrapper">
-                    <!-- Inicio del slider -->
-                    <div class="slide-item" style="background-image: url('/Public/images/Prueba1.jpg')">
-                        <div class="slide-content">
-                            <h3 class="nombre-slide">Slide 1</h3>
-                            <p class="des">Descripción del slide 1</p>
-                            <a>Ver Más</a>
-                        </div>
-                    </div>
-                    <div class="slide-item" style="background-image: url('/Public/images/Prueba2.jpg')">
-                        <div class="slide-content">
-                            <h3 class="nombre-slide">Slide 2</h3>
-                            <p class="des">Descripción del slide 2</p>
-                            <a>Ver Más</a>
-                        </div>
-                    </div>
-                    <div class="slide-item" style="background-image: url('/Public/images/Prueba3.jpg')">
-                        <div class="slide-content">
-                            <h3 class="nombre-slide">Slide 3</h3>
-                            <p class="des">Descripción del slide 3</p>
-                            <a>Ver Más</a>
-                        </div>
-                    </div>
-                    <div class="slide-item" style="background-image: url('/Public/images/Prueba1.jpg')">
-                        <div class="slide-content">
-                            <h3 class="nombre-slide">Slide 4</h3>
-                            <p class="des">Descripción del slide 4</p>
-                            <a>Ver Más</a>
-                        </div>
-                    </div>
-                    <div class="slide-item" style="background-image: url('/Public/images/Prueba2.jpg')">
-                        <div class="slide-content">
-                            <h3 class="nombre-slide">Slide 5</h3>
-                            <p class="des">Descripción del slide 5</p>
-                            <a>Ver Más</a>
-                        </div>
+<section id="sectionProyectos" class="seccion-proyectos">
+    <div class="contenedor-proyectos tarjeta-fondo">
+        <h2 class="titulo-seccion">Mis Proyectos</h2>
+        
+        <div class="slider-container">
+            <div class="slide-wrapper">
+                <div class="slide-item" style="background-image: url('/assets/img/Agenda_Java.png')">
+                    <div class="slide-content">
+                        <h3 class="nombre-slide">Agenda de Contactos</h3>
+                        <p class="des">CRUD de una agenda de contacos</p>
+                        <p class="des">Tecnologías Java | Java Swing | Git | GitHub</p>
+                        <a href="https://github.com/Liw1030/Hackathon-Back">Ver repositorio</a>
                     </div>
                 </div>
-
-                <!-- Botones pasar y devolver -->
-                <div class="slider-nav">
-                    <button id="prev">‹</button>
-                    <button id="next">›</button>
+                <div class="slide-item" style="background-image: url('/assets/img/Poke\ Radar.png')">
+                    <div class="slide-content">
+                        <h3 class="nombre-slide">PokeRadar</h3>
+                        <p class="des">Api de Pokemon, función agregar a favoritos y mini juego.</p>
+                        <p class="des">Tegnologías JavaScript | Bootstrap | LocalStorage | CSS y HTML</p>
+                        <a href="https://github.com/Liw1030/PokeRadar">Ver repositorio</a>
+                    </div>
                 </div>
+                <div class="slide-item" style="background-image: url('/assets/img/Ecommerse.png')">
+                    <div class="slide-content">
+                        <h3 class="nombre-slide">Ecommerse Growza</h3>
+                        <p class="des">Ecommerse de venta de vegetales</p>
+                        <p class="des">Tegnologías JavaScript | Bootstrap | LocalStorage | CSS y HTML | Java | Spring Boot | MySQL</p>
+                        <a href="#">Ver repositorio</a>
+                    </div>
+                </div>
+                <div class="slide-item" style="background-image: url('/assets/img/Ecommerse.png')">
+                    <div class="slide-content">
+                        <h3 class="nombre-slide">Wcommerse Growza</h3>
+                        <p class="des">Ecommerse de venta de vegetales</p>
+                        <p class="des">Tegnologías JavaScript | Bootstrap | LocalStorage | CSS y HTML | Java | Spring Boot | MySQL</p>
+                        <a href="#">Ver repositorio</a>
+                    </div>
+                </div>
+                </div>
+
+            <div class="slider-nav">
+                <button id="prev">‹</button>
+                <button id="next">›</button>
             </div>
         </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="/JS/Proyectos.js"></script>
-</body>
-
-</html>
+    </div>
+</section>
