@@ -1,0 +1,71 @@
+:root {
+    --wisteria: #c8b1e4ff;
+    --tekhelet: #532b88ff;
+    --russian-violet: #2f184bff;
+    --magnolia: #f4effaff;
+    --amethyst: #9b72cfff;
+    --size-title: 32px;
+    --size-subtitle: 24px;
+    --size-text: 16px;
+    --font: 'Montserrat', sans-serif;
+}
+
+
+a.navbar-brand{
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    font-family: var(--font);
+}
+
+.navbar {
+    background-color: var(--tekhelet);
+    color: var(--wisteria);
+    height: 60px;
+}
+
+.navbar-brand {
+    color: var(--magnolia);
+    font-weight: bold;
+    font-size: var(--size-subtitle);
+}
+
+.navbar-brand span {
+    color: var(--magnolia); 
+}
+
+/* Efecto de la barra */
+.navbar-nav .nav-link {
+    color: var(--wisteria); 
+    font-weight: bold;
+    font-size: var(--size-text);
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out; 
+}
+
+/* Cambia el color del texto al pasar el mouse o al estar activo */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.nav-active {
+    color: var(--magnolia);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--amethyst);
+    transition: width 0.3s ease-in-out;
+}
+
+/* La barra se expande al pasar el mouse o al estar activo */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.nav-active::after {
+    width: 100%;
+}

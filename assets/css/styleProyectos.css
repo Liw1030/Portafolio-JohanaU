@@ -10,8 +10,6 @@
     --font: 'Montserrat', san-serif;
 }
 
-
-
 h5.card-title.text-center {
     color: var(--russian-violet);
     font-size: var(--size-tittle);
@@ -34,74 +32,72 @@ h5.card-title.text-center {
     position: relative;
 }
 
-/* Todas las tarjetas */
+/* Base de todas las tarjetas. Se usa 'translate' para mejor performance */
 .slide-item {
     width: 200px;
     height: 320px;
     position: absolute;
-    transform: translateY(-50%);
     border-radius: 20px;
     box-shadow: 0 10px 20px var(--amethyst);
     background-position: center;
     background-size: cover;
-    transition: all 2s ease;
     opacity: 0;
     z-index: 0;
+    transition: transform 1.5s ease-in-out, opacity 0.8s ease-in-out;
 }
 
-/* Slide (principal) */
+/* Diapositiva principal (activa) */
 .slide-item.active {
-    top: 40%;
-    transform: translateY(-50%);
-    width: 70%;
-    height: 80%;
-    border-radius: 20px;
     opacity: 1;
     z-index: 2;
+    /* Posición y escala con transform */
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    left: 40%;
+    width: 70%;
+    height: 80%;
 }
 
 /* Miniaturas */
 .slide-item.next-1 {
-    left: calc(50% + 200px);
-    top: 40%;
-    transform: translate(-50%, -50%) scale(0.8);
     opacity: 1;
     z-index: 5;
+    transform: translate(150px, -50%) scale(0.8);
+    top: 50%;
+    left: 50%;
 }
 
 .slide-item.next-2 {
-    left: calc(50% + 260px);
-    top: 40%;
-    transform: translate(-50%, -50%) scale(0.65);
     opacity: 0.9;
     z-index: 4;
+    transform: translate(260px, -50%) scale(0.65);
+    top: 50%;
+    left: 50%;
 }
 
 .slide-item.next-3 {
-    left: calc(50% + 320px);
-    top: 40%;
-    transform: translate(-50%, -50%) scale(0.5);
     opacity: 0.8;
     z-index: 3;
+    transform: translate(350px, -50%) scale(0.5);
+    top: 50%;
+    left: 50%;
 }
 
 .slide-item.next-4 {
-    left: calc(50% + 370px);
-    top: 40%;
-    transform: translate(-50%, -50%) scale(0.4);
     opacity: 0.7;
     z-index: 2;
+    transform: translate(420px, -50%) scale(0.4);
+    top: 50%;
+    left: 50%;
 }
 
 .slide-item.next-5 {
-    left: calc(50% + 410px);
-    top: 40%;
-    transform: translate(-50%, -50%) scale(0.3);
     opacity: 0.6;
     z-index: 1;
+    transform: translate(470px, -50%) scale(0.3);
+    top: 50%;
+    left: 50%;
 }
-
-
 
 /* Contenido del slide principal */
 .slide-content {
@@ -173,4 +169,48 @@ h3.nombre-slide {
 .slider-nav button:hover {
     background: var(--tekhelet);
     color: var(--wisteria);
+}
+
+@media (max-width: 768px) {
+    /* Ajusta el ancho del contenedor para pantallas pequeñas */
+    .slide-wrapper {
+        width: 100%;
+    }
+
+    /* Solo el slide activo es visible y ocupa todo el ancho */
+    .slide-item {
+        /* Oculta las miniaturas */
+        opacity: 0 !important;
+        /* Reajusta el tamaño */
+        width: 90% !important; 
+        height: 70% !important;
+        /* Asegura que todos los slides estén fuera de la vista inicialmente */
+        transform: translate(-50%, -50%) scale(1) translateX(100vw);
+    }
+
+    .slide-item.active {
+        /* Hace que el slide activo se muestre en el centro */
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) scale(1) translateX(0);
+    }
+    
+    /* Oculta las miniaturas en móviles */
+    .slide-item.next-1,
+    .slide-item.next-2,
+    .slide-item.next-3,
+    .slide-item.next-4,
+    .slide-item.next-5 {
+        opacity: 0 !important;
+    }
+
+    /* Oculta los botones de navegación */
+    .slider-nav {
+        display: none;
+    }
+
+    /* Ajusta el contenido del slide para móviles */
+    .slide-content {
+        left: 20px;
+        width: 80%;
+    }
 }
